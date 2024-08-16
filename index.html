@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assest/base.css">
+    <link rel="stylesheet" href="./assest/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="assignment">
+            <div class="assignment-body">
+                <div class="header">
+                    <div class="header-user">
+                        <img src="./assest/img/z4825249762460_1fb5e9e46c5cd9ab4fcfd8387d4bc7d4.jpg" alt="" class="header-user-img">
+                    </div>
+                    <div class="header-info">
+                        <h2 class="header-info-class">Lớp :Lập trình web</h2>
+                        <h3 class="header-info-name">Tên : Đào Văn Thành</h3>
+                        <h3 class="header-info-user">Mã SV: 222001495</h3>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="tabs">
+                        <div class="tabs-item active">
+                            <i class="fa-solid fa-book"></i>
+                            Buổi 1
+                        </div>
+                        <div class="tabs-item">
+                            <i class="fa-solid fa-book"></i>
+                            Buổi 2
+                        </div>
+                        <div class="tabs-item">
+                            <i class="fa-solid fa-book"></i>
+                            Buổi 3
+                        </div>
+                        <div class="tabs-item">
+                            <i class="fa-solid fa-book"></i>
+                            Buổi 4
+                        </div>
+                        <div class="tabs-item">
+                            <i class="fa-solid fa-book"></i>
+                            Buổi 5
+                        </div>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="tab-content-item active">
+                            <a href="#" class="tab-content-item__link">Bài 1</a>
+                            <a href="#" class="tab-content-item__link">Bài 2</a>
+                            <a href="#" class="tab-content-item__link">Bài 3</a>
+                        </div>
+                        <div class="tab-content-item">
+                            <a href="#" class="tab-content-item__link">Bài 1</a>
+                            <a href="#" class="tab-content-item__link">Bài 2</a>
+                            <a href="#" class="tab-content-item__link">Bài 3</a>
+                            <a href="#" class="tab-content-item__link">Bài 4</a>
+                        </div>
+                        <div class="tab-content-item">
+                            <a href="#" class="tab-content-item__link">Bài 1</a>
+                            <a href="#" class="tab-content-item__link">Bài 2</a>
+                            <a href="#" class="tab-content-item__link">Bài 3</a>
+                            <a href="#" class="tab-content-item__link">Bài 4</a>
+                            <a href="#" class="tab-content-item__link">Bài 5</a>
+                            
+                        </div>
+                        <div class="tab-content-item">
+                            <a href="#" class="tab-content-item__link">Bài 1</a>
+                            <a href="#" class="tab-content-item__link">Bài 2</a>
+                            <a href="#" class="tab-content-item__link">Bài 3</a>
+                            <a href="#" class="tab-content-item__link">Bài 4</a>
+                            <a href="#" class="tab-content-item__link">Bài 5</a>
+                            <a href="#" class="tab-content-item__link">Bài 6</a>
+                        </div>
+                        <div class="tab-content-item">
+                            <a href="#" class="tab-content-item__link">Bài 1</a>
+                            <a href="#" class="tab-content-item__link">Bài 2</a>
+                            <a href="#" class="tab-content-item__link">Bài 3</a>
+                            <a href="#" class="tab-content-item__link">Bài 4</a>
+                            <a href="#" class="tab-content-item__link">Bài 5</a>
+                            <a href="#" class="tab-content-item__link">Bài 6</a>
+                            <a href="#" class="tab-content-item__link">Bài 7</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+const tabs = $$('.tabs-item');
+const items = $$('.tab-content-item');
+
+tabs.forEach((tab, index) => {
+    const item = items[index];
+    tab.onclick = function () {
+        const activeTab = $('.tabs-item.active');
+        const activeItem = $('.tab-content-item.active');
+        
+        if (activeTab) {
+            activeTab.classList.remove('active');
+        }
+        if (activeItem) {
+            activeItem.classList.remove('active');
+        }
+
+        this.classList.add('active');
+        item.classList.add('active');
+        console.log(item);
+    };
+});
+
+
+</script>
+</html>
